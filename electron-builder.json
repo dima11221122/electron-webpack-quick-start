@@ -1,0 +1,65 @@
+{
+  "productName": "TestMace",
+  "appId": "com.electron.testmace",
+  "protocols": {
+    "name": "testmace",
+    "schemes": ["testmace"]
+  },
+  "buildDependenciesFromSource": true,
+  "generateUpdatesFilesForAllChannels": true,
+  "directories": {
+    "output": "release/"
+  },
+  "files": [
+    "**/*",
+    "!*.ts",
+    "!*.code-workspace",
+    "!LICENSE.md",
+    "!package.json",
+    "!package-lock.json",
+    "!src/",
+    "!e2e/",
+    "!hooks/",
+    "!.angular-cli.json",
+    "!_config.yml",
+    "!karma.conf.js",
+    "!tsconfig.json",
+    "!tslint.json",
+    "!embedded.provisionprofile",
+    "!testmace.provisionprofile"
+  ],
+  "win": {
+    "icon": "dist/favicon.png",
+    "verifyUpdateCodeSignature": true,
+    "target": [
+      "nsis"
+    ]
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowElevation": false,
+    "allowToChangeInstallationDirectory": true,
+    "license": "license.txt",
+    "perMachine": true
+  },
+  "mac": {
+    "icon": "dist",
+    "target": [
+      "default"
+    ],
+    "hardenedRuntime": true,
+    "entitlements": "build/entitlements.mac.inherit.plist",
+    "gatekeeperAssess": false
+  },
+  "linux": {
+    "icon": "dist",
+    "target": [
+      "AppImage",
+      "snap"
+    ]
+  },
+  "snap": {
+    "summary": "Powerful IDE to work with API",
+    "description": "TestMace is an IDE to work with API. Harness the power of scenarios, autocompletion and syntax highlight for API development. Write tests, share code without leaving the comfortable development environment. TestMace is available for Windows, Linux and MacOS"
+  }
+}
