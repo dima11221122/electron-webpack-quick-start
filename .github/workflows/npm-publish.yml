@@ -19,5 +19,10 @@ jobs:
           node-version: 12
       - run: choco install visualstudio2017community
       - run: choco install visualstudio2017buildtools
-      - run: npm install --global --force yarn npx
+      - run: choco install python2
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v1.0.1
+        with:
+          vs-version: '[15.0,16.0)'
+      - run: npm install --global yarn npx
       - run: yarn

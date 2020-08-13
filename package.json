@@ -10,11 +10,11 @@
     "postinstall": "npx electron-builder install-app-deps"
   },
   "dependencies": {
-    "nodegit": "0.27.0",
+    "nodegit": "0.26.1",
     "source-map-support": "^0.5.16"
   },
   "devDependencies": {
-    "electron": "9.2.0",
+    "electron": "9.0.0",
     "electron-builder": "22.8.0",
     "electron-webpack": "^2.8.2",
     "webpack": "~4.42.1"
