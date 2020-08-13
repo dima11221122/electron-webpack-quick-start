@@ -25,4 +25,4 @@ jobs:
         with:
           vs-version: '[15.0,16.0)'
       - run: npm install --global yarn npx
-      - run: yarn
+      - run: npm ci
