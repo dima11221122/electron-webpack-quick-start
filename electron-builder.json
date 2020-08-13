@@ -5,7 +5,6 @@
     "name": "testmace",
     "schemes": ["testmace"]
   },
-  "buildDependenciesFromSource": true,
   "generateUpdatesFilesForAllChannels": true,
   "directories": {
     "output": "release/"
