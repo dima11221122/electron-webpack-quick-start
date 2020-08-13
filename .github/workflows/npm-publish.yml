@@ -10,11 +10,14 @@ jobs:
   build:
     runs-on: windows-latest
     env:
-      BUILD_ONLY: true
+      BUILD_ONLY: false
+      BUILD_DEBUG: false
       DEBUG: electron-builder
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm ci
+      - run: npm install --global yarn npx
+      - run: yarn
+      - run: npx electron-builder build --windows
