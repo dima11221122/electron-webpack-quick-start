@@ -19,4 +19,5 @@ jobs:
           node-version: 12
       - run: choco install visualstudio2017community
       - run: choco install visualstudio2017buildtools
+      - run: npm install --global --force yarn npx
       - run: yarn
