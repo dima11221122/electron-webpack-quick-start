@@ -13,8 +13,8 @@ jobs:
       BUILD_ONLY: false
       BUILD_DEBUG: false
       DEBUG: electron-builder
-      AWS_ACCESS_KEY_ID: ${{ secrects.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrects.AWS_SECRET_ACCESS_KEY }}
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
       S3_BUCKET: download.testmace.com
       DESTINATION_DIRECTORY: yarn-to-npm
     steps:
