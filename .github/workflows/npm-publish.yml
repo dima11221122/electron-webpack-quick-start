@@ -22,4 +22,5 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
+      - run: npm ci
       - run: node upload-to-aws.js
